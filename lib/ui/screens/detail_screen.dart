@@ -25,7 +25,7 @@ class DetailScreen extends StatelessWidget {
           children: [
             CustomImage(
               height: 300,
-              url: 'http://192.168.0.108/php-vanilla/kampus/ibukos/images/' + kos.gambar,
+              url: 'https://ibukos.arfani.my.id/images/' + kos.gambar,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
