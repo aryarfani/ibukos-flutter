@@ -14,6 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Ibukos',
+      builder: (context, child) => MediaQuery(
+        data: MediaQuery.of(context).copyWith(
+          alwaysUse24HourFormat: true,
+          textScaleFactor: 1.0,
+        ),
+        child: child,
+      ),
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'NunitoSans',

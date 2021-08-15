@@ -28,20 +28,23 @@ class InfoDialog extends StatelessWidget {
           )),
       actions: <Widget>[
         onClickCancel != null
-            ? OutlineButton(
+            ? OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+                ),
                 onPressed: () => onClickCancel(),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-                borderSide: BorderSide(color: Colors.blue),
                 child: Text(
                   "Batal",
                   style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600),
                 ),
               )
             : SizedBox(),
-        RaisedButton(
-          color: Colors.blue,
-          elevation: 0,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: Colors.blue,
+            elevation: 0,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+          ),
           onPressed: () => onClickOK(),
           child: Text(
             clickText,

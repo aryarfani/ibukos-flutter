@@ -78,7 +78,7 @@ class _MainScreenState extends State<MainScreen> {
                                   KosModel kos = controller.listKos[index];
                                   return InkWell(
                                     onTap: () {
-                                      Get.to(DetailScreen(kos));
+                                      Get.to(() => DetailScreen(kos));
                                     },
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,

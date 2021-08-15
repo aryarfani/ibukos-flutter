@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void startTimer() {
     Timer(Duration(milliseconds: 1000), () {
-      Get.to(MainScreen());
+      Get.to(() => MainScreen());
     });
   }
 }

@@ -2,8 +2,6 @@ import 'dart:convert';
 
 List<KosModel> kosModelFromJson(String str) => List<KosModel>.from(json.decode(str).map((x) => KosModel.fromJson(x)));
 
-String kosModelToJson(List<KosModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
-
 class KosModel {
   KosModel({
     this.nama,
@@ -32,15 +30,4 @@ class KosModel {
         gambar: json["gambar"],
         createdAt: DateTime.parse(json["created_at"]),
       );
-
-  Map<String, dynamic> toJson() => {
-        "nama": nama,
-        "telp": telp,
-        "biaya": biaya,
-        "deskripsi": deskripsi,
-        "alamat": alamat,
-        "gambar": gambar,
-        "created_at":
-            "${createdAt.year.toString().padLeft(4, '0')}-${createdAt.month.toString().padLeft(2, '0')}-${createdAt.day.toString().padLeft(2, '0')}",
-      };
 }
